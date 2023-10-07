@@ -1,14 +1,18 @@
 #include <iostream>
 #include <string>
 
-int main(){
-  std::string str,s;
+int main()
+{
+  std::string str, s;
   std::cin >> str;
-  for (char c: str){
-    if (c != '+'){
+  for (char c : str)
+  {
+    if (c != '+')
+    {
       s += c;
     }
-    else{
+    else
+    {
       std::cout << s << std::endl;
     }
   }
