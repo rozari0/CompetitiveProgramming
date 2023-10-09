@@ -1,5 +1,15 @@
 #include <iostream>
-#include <string>
+
+long long int zero_count(long long int num)
+{
+    int count = 0;
+    while (num % 10 == 0 && num >= 10)
+    {
+        count++;
+        num = num / 10;
+    }
+    return count;
+}
 
 int main()
 {
@@ -14,21 +24,8 @@ int main()
             ans = ans * i;
         }
         T--;
-        std::string tempans = std::to_string(ans);
-        int zero_count = 0;
-        for (int i = tempans.length() - 1; i > 0; i--)
-        {
-            if (tempans[i] == '0')
-            {
-                zero_count++;
-            }
-            else
-            {
-                break;
-            }
-        }
 
-        std::cout << zero_count << std::endl;
+        std::cout << zero_count(ans) << std::endl;
     }
     return 0;
 }
