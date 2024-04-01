@@ -1,19 +1,19 @@
-#include <iostream>
+#include <stdio.h>
 
 int main()
 {
     int T, n;
-    std::cin >> T;
+    scanf("%d",&T);
     while (T > 0)
     {
-        std::cin >> n;
+        scanf("%d",&n);
         unsigned long long ans = 1;
         for (int i = 1; i <= n; i++)
         {
             ans = ans * i;
         }
         T--;
-        std::cout << ans << std::endl;
+        printf("%llu\n",ans);
     }
     return 0;
 }
